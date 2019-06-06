@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>Neural networks</title>
+<meta charset="UTF-8"/>
+
+<script src="Neural_network2.js">
+</script>
+
+<script src="Regression.js">
+</script>
+
+<title>Animation of neural network</title>
+</head>
+<body onload="start();">
+    Нарисуем анимацию работы
+    <a href="Neural_network.html">нейронной сети</a>
+    (обычный <a href="SGD.html">стохастический градиентный спуск</a>):
+    <p>
+    b=
+    <input id="b_slider" onchange="onChangeInterval()" type="range" min="0.1" max="10" step="0.1"/>
+    <span id="b"></span>
+    
+    </p>
+
+
+    <p>
+    Величина batch
+    <select id="batch" onchange="onChangeInterval()">
+    </select>
+    </p>
+
+
+    <table border="1">
+    <tr bgcolor="yellow">
+    <td>Loss</td>
+    <td>Epoche</td>
+    </tr>
+    <tr>
+    <td id="accuracy"></td>
+    <td id="count_of_iterations"></td>
+    </tr>
+    </table>
+    <canvas id="plot" width="800" height="600"></canvas>
+    <p>
+    <input id="slider" onchange="onSlider()" type="range" min="0.005" max="0.1" step="0.001"/>
+    &#951;=<span id="eta"></span>
+    </p>
+
+    
+
+<hr/>
+<a href="sine_in_Keras.html">Здесь</a> это же (без анимации)
+на Python'е (фреймворк Keras)
+</body>
+</html>
